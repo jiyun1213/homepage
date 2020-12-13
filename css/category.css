@@ -1,0 +1,16 @@
+nav ul {
+    list-style: none;
+    border-top: 1px solid #18bc9c;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+nav ul li{
+    display: inline;
+    letter-spacing: .3em;
+    margin-left: 2em;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #18bc9c;
+    line-height: 3em;
+}
