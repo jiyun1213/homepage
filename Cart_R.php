@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>장바구니</title>
-<link rel="stylesheet"  href="/css/cart.css" />
+<link rel="stylesheet" type="text/css" href="/css/common.css" />
 </head>
 <body>
 	<?php
@@ -16,20 +16,20 @@
 		$ba_price = $shopinfo['price'];
 
 		$sql2 = mq("insert into basket(pro_pic,pro_name,price,date) values('".$ba_pic."','".$ba_name."','".$ba_price."',now())");
-		echo "<script>alert('장바구니 등록되어습니다.');</script>";
+		echo "<script>alert('장바구니에 등록되었습니다.');</script>";
 
 	?>
 	<div id="bg1"></div>
-		<div id="main_in">	
+	<div id="main_in">
 				<div id="content">
 					<h2>장바구니</h2>
 					 <table class="cart">
 				      <thead>
 				          <tr>
-				              <th width="350">상품정보</th>
-							  <th width="120">상품금액</th>
-							  <th width="120">상품금액</th>
-							  <th width="120">삭제</th>
+				              <th width="350">상품갯수</th>
+				              <th width="120">상품명</th>
+				              <th width="150">상품금액</th>
+				              <th width="100">삭제</th>
 				           </tr>
 				        </thead>
 				        <?php 
