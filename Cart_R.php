@@ -11,12 +11,11 @@
 		$sql = mq("select * from slist where idx='".$bno."'"); /* 받아온 idx값을 선택 */
 		$shopinfo = $sql->fetch_array();
 
-		$ba_pic = $shopinfo['pro_pic'];
 		$ba_name = $shopinfo['pro_name'];
 		$ba_price = $shopinfo['price'];
 
-		$sql2 = mq("insert into basket(pro_pic,pro_name,price,date) values('".$ba_pic."','".$ba_name."','".$ba_price."',now())");
-		echo "<script>alert('장바구니 등록되어습니다.');</script>";
+		$sql2 = mq("insert into basket(pro_name,price,date) values('".$ba_name."','".$ba_price."',now())");
+		echo "<script>alert('장바구니에 등록되었습니다.');</script>";
 
 	?>
 	<div id="bg1"></div>
@@ -27,9 +26,8 @@
 				      <thead>
 				          <tr>
 				              <th width="350">상품정보</th>
-							  <th width="120">상품금액</th>
-							  <th width="120">상품금액</th>
-							  <th width="120">삭제</th>
+							  <th width="120">상품개수</th>
+							  <th width="150">상품금액</th>
 				           </tr>
 				        </thead>
 				        <?php 
@@ -40,7 +38,6 @@
 				        <tr>
 				          <td width="300">
 				          	<div class="bak_item">
-							<div class="pro_img"><img src="/shop/<?php echo $bask['pro_pic'];?>.jpg" alt="propic" title="propic" /></div>
 							<div class="pro_nt"><?php echo $bask['pro_name'];?></div>
 						</div>
 				          </td>
